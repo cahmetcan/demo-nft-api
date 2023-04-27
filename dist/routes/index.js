@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const NFTs_1 = require("../controllers/NFTs");
+const users_1 = require("../controllers/users");
+const router = (0, express_1.Router)();
+router.get("/nfts", NFTs_1.listNFTs);
+router.get("/users", users_1.listUsers);
+router.get('/transactions', NFTs_1.listTransactions);
+exports.default = router;
